@@ -14,6 +14,10 @@
 		6188A2A01AD75F72008B6F7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6188A29F1AD75F72008B6F7B /* Images.xcassets */; };
 		6188A2A31AD75F72008B6F7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6188A2A11AD75F72008B6F7B /* LaunchScreen.xib */; };
 		6188A2AF1AD75F72008B6F7B /* SMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188A2AE1AD75F72008B6F7B /* SMTests.m */; };
+		6188A2BE1AD76335008B6F7B /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188A2BD1AD76335008B6F7B /* AuthorizationViewController.m */; };
+		6188A2C11AD769AF008B6F7B /* logo_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6188A2C01AD769AF008B6F7B /* logo_up.png */; };
+		6188A2C31AD779A7008B6F7B /* phoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6188A2C21AD779A7008B6F7B /* phoneIcon.png */; };
+		6188A2C71AD77C4E008B6F7B /* UIView+BorderRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188A2C61AD77C4E008B6F7B /* UIView+BorderRound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		6188A2A81AD75F72008B6F7B /* SMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6188A2AD1AD75F72008B6F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6188A2AE1AD75F72008B6F7B /* SMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTests.m; sourceTree = "<group>"; };
+		6188A2BC1AD76335008B6F7B /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
+		6188A2BD1AD76335008B6F7B /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		6188A2C01AD769AF008B6F7B /* logo_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_up.png; sourceTree = "<group>"; };
+		6188A2C21AD779A7008B6F7B /* phoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phoneIcon.png; sourceTree = "<group>"; };
+		6188A2C51AD77C4E008B6F7B /* UIView+BorderRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderRound.h"; sourceTree = "<group>"; };
+		6188A2C61AD77C4E008B6F7B /* UIView+BorderRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderRound.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,9 @@
 		6188A2861AD75F72008B6F7B = {
 			isa = PBXGroup;
 			children = (
+				6188A2C41AD77BFD008B6F7B /* Categories */,
+				6188A2BF1AD76978008B6F7B /* Resource */,
+				6188A2B81AD76212008B6F7B /* StartProgram */,
 				6188A2911AD75F72008B6F7B /* SM */,
 				6188A2AB1AD75F72008B6F7B /* SMTests */,
 				6188A2901AD75F72008B6F7B /* Products */,
@@ -117,6 +130,57 @@
 				6188A2AD1AD75F72008B6F7B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6188A2B81AD76212008B6F7B /* StartProgram */ = {
+			isa = PBXGroup;
+			children = (
+				6188A2B91AD7622C008B6F7B /* Authorization */,
+				6188A2BA1AD762AE008B6F7B /* Registration */,
+				6188A2BB1AD762BE008B6F7B /* RecoveryPIN */,
+			);
+			name = StartProgram;
+			sourceTree = "<group>";
+		};
+		6188A2B91AD7622C008B6F7B /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				6188A2BC1AD76335008B6F7B /* AuthorizationViewController.h */,
+				6188A2BD1AD76335008B6F7B /* AuthorizationViewController.m */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
+		6188A2BA1AD762AE008B6F7B /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
+		6188A2BB1AD762BE008B6F7B /* RecoveryPIN */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RecoveryPIN;
+			sourceTree = "<group>";
+		};
+		6188A2BF1AD76978008B6F7B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6188A2C01AD769AF008B6F7B /* logo_up.png */,
+				6188A2C21AD779A7008B6F7B /* phoneIcon.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		6188A2C41AD77BFD008B6F7B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6188A2C51AD77C4E008B6F7B /* UIView+BorderRound.h */,
+				6188A2C61AD77C4E008B6F7B /* UIView+BorderRound.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6188A29E1AD75F72008B6F7B /* Main.storyboard in Resources */,
+				6188A2C31AD779A7008B6F7B /* phoneIcon.png in Resources */,
 				6188A2A31AD75F72008B6F7B /* LaunchScreen.xib in Resources */,
 				6188A2A01AD75F72008B6F7B /* Images.xcassets in Resources */,
+				6188A2C11AD769AF008B6F7B /* logo_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6188A2C71AD77C4E008B6F7B /* UIView+BorderRound.m in Sources */,
+				6188A2BE1AD76335008B6F7B /* AuthorizationViewController.m in Sources */,
 				6188A29B1AD75F72008B6F7B /* ViewController.m in Sources */,
 				6188A2981AD75F72008B6F7B /* AppDelegate.m in Sources */,
 				6188A2951AD75F72008B6F7B /* main.m in Sources */,
