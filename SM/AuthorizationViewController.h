@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 #import "UIView+BorderRound.h"
+#import "RecoveryPINOneViewController.h"
+#import "RegistrationOneViewController.h"
 @interface AuthorizationViewController : UIViewController
+
+-(void) tappedStart;
+-(void) tapperPin;
+-(void) tappedReg;
 
 @end

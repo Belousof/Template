@@ -21,11 +21,13 @@
     [self.view addSubview:wrapper];
     //вычисляем высоту логотипа
     CGFloat heightLogo = width*100/720*192/100;
+    // View Top. Окрашивает в Зеленый верхнюю полоску экрана
     {
     UIView *top = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 30)];
     top.backgroundColor = [UIColor colorWithRed:95/255.0f green:187/255.0f blue:146/255.0f alpha:1];
     [wrapper addSubview:top];
     }
+    // ImageView logo. Логотип
     {
         UIImageView *logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 50, width, heightLogo)];
         logo.backgroundColor = [UIColor whiteColor];
@@ -33,6 +35,7 @@
         logo.image = logoImg;
         [wrapper addSubview:logo];
     }
+    // View main. Обертка основного контена.
     {
         UIView *main = [[UIView alloc]initWithFrame:CGRectMake(40, heightLogo+50+30, width-80, height-(heightLogo+50+31))];
         //main.backgroundColor = [UIColor lightGrayColor];
@@ -97,6 +100,9 @@
             buttonPin.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
             [buttonPin.titleLabel setFont:[UIFont fontWithName:@"Trebuchet MS" size:16]];
             [main addSubview:buttonPin];
+            [buttonPin addTarget:self
+                          action:@selector(tapperPin)
+                forControlEvents:UIControlEventTouchUpInside];
             
             //----------------
             UIButton *buttonStart = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -104,25 +110,38 @@
             [buttonStart setTitle:@"Войти" forState:UIControlStateNormal];
             [buttonStart setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [buttonStart setBackgroundColor:[UIColor colorWithRed:237/255.0f green:113/255.0f blue:75/255.0f alpha:1]];
-            //UIImage *image = ACUTilingImageRGB(253/255.0, 123/255.0, 43/255.0, 1);
-            
-            
-            
             [buttonStart.titleLabel setFont:[UIFont fontWithName:@"Trebuchet MS" size:16]];
             [main roundMyView:buttonStart borderRadius:10.0f borderWidth:0 color:0];
             [main addSubview:buttonStart];
+            [buttonStart addTarget:self
+                            action:@selector(tappedStart)
+                  forControlEvents:UIControlEventTouchUpInside];
             
             //----------------
             UIButton *buttonReg = [UIButton buttonWithType:UIButtonTypeCustom];
             buttonReg.frame = CGRectMake(0, height-50, width, 20);
             [buttonReg setTitle:@"Зарегестрироваться" forState:UIControlStateNormal];
             [buttonReg setTitleColor:[UIColor colorWithRed:119/255.0f green:107/255.0f blue:95/255.0f alpha:1] forState:UIControlStateNormal];
+            [buttonReg setTitleColor:[UIColor colorWithRed:237/255.0f green:113/255.0f blue:75/255.0f alpha:1] forState:UIControlStateHighlighted];
             //buttonPin.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
             [buttonReg.titleLabel setFont:[UIFont fontWithName:@"Trebuchet MS" size:16]];
             [main addSubview:buttonReg];
+            [buttonReg addTarget:self
+                          action:@selector(tappedReg)
+                forControlEvents:UIControlEventTouchUpInside];
         }
     }
-
-    
+}
+-(void) tappedStart{
+    MainViewController *main = [[MainViewController alloc] init];
+    [self presentViewController:main animated:NO completion:nil];
+}
+-(void) tapperPin{
+    RecoveryPINOneViewController *pin = [[RecoveryPINOneViewController alloc] init];
+    [self presentViewController:pin animated:NO completion:nil];
+}
+-(void) tappedReg{
+    RegistrationOneViewController *reg = [[RegistrationOneViewController alloc] init];
+    [self presentViewController:reg animated:NO completion:nil];
 }
 @end

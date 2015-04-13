@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AuthorizationViewController.h"
+#import "RecoveryPINOneViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

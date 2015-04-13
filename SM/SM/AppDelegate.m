@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     AuthorizationViewController *authorization = [[AuthorizationViewController alloc] init];
+    //RecoveryPINThreeViewController *recoveryPIN = [[RecoveryPINThreeViewController alloc] init];
     
     self.window.rootViewController = authorization;
     return YES;
